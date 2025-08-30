@@ -98,6 +98,18 @@ void loop() {
   LeftPillar_OnAll(255, 150, 0);
   RightPillar_OnAll(255, 150, 0);
   delay(5000);
+
+  for (int b = 0; b < 30; b++) {
+    LeftPillar_OnAll_Even(255, 150, 0);
+    RightPillar_OnAll_Even(255, 150, 0);
+    delay(100);
+    LeftPillar_OnAll_Odd(255, 150, 0);
+    RightPillar_OnAll_Odd(255, 150, 0);
+    delay(100);
+  }
+  LeftPillar_OnAll(255, 150, 0);
+  RightPillar_OnAll(255, 150, 0);
+  delay(5000);
   OffAll();
 }
 

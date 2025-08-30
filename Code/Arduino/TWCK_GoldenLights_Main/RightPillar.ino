@@ -52,3 +52,25 @@ void RightPillar_OnAll(uint8_t ColorR, uint8_t ColorG, uint8_t ColorB) {
   }
   FastLED.show();
 }
+
+void RightPillar_OnAll_Odd(uint8_t ColorR, uint8_t ColorG, uint8_t ColorB) {
+  for (int i = 134; i < 270; i++) {
+    if (i % 2 == 0) {
+      setLedColor(i, CRGB(0, 0, 0));
+    } else {
+      setLedColor(i, CRGB(ColorR, ColorG, ColorB));
+    }
+  }
+  FastLED.show();
+}
+
+void RightPillar_OnAll_Even(uint8_t ColorR, uint8_t ColorG, uint8_t ColorB) {
+  for (int i = 134; i < 270; i++) {
+    if (i % 2 == 0) {
+      setLedColor(i, CRGB(ColorR, ColorG, ColorB));
+    } else {
+      setLedColor(i, CRGB(0, 0, 0));
+    }
+  }
+  FastLED.show();
+}
